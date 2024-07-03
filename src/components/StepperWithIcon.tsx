@@ -5,7 +5,7 @@ import FR from "../assets/flags/FR.png"
 import CN from "../assets/flags/CN.png"
 import questionMark from "../assets/flags/questionMark.png"
  
-export default function StepperWithIcon({ activeStep, setActiveStep }) {
+export default function StepperWithIcon({ activeStep, setActiveStep } :{ activeStep: number, setActiveStep: React.Dispatch<React.SetStateAction<number>> }) {
   const [isLastStep, setIsLastStep] = React.useState(false);
   const [isFirstStep, setIsFirstStep] = React.useState(false);
  
