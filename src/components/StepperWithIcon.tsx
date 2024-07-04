@@ -25,19 +25,19 @@ export default function StepperWithIcon({
                 isLastStep={(value) => setIsLastStep(value)}
                 isFirstStep={(value) => setIsFirstStep(value)}
             >
-                <Step onClick={() => setActiveStep(0)}>
+                <Step className="bg-gray-400" onClick={() => setActiveStep(0)}>
                     <img src={PT} className="w-5 h-5" />
                 </Step>
-                <Step onClick={() => setActiveStep(0)}>
+                <Step className="bg-gray-400" onClick={() => setActiveStep(0)}>
                     <img src={FR} className="w-5 h-5" />
                 </Step>
-                <Step onClick={() => setActiveStep(1)}>
+                <Step className="bg-gray-400" onClick={() => setActiveStep(1)}>
                     <img src={CN} className="w-5 h-5" />
                 </Step>
-                <Step onClick={() => setActiveStep(2)}>
+                <Step className="bg-gray-400" onClick={() => setActiveStep(2)}>
                     <img src={PT} className="w-5 h-5" />
                 </Step>
-                <Step onClick={() => setActiveStep(2)}>
+                <Step className="bg-gray-400" onClick={() => setActiveStep(2)}>
                     <img src={questionMark} className="w-5 h-5" />
                 </Step>
             </Stepper>
