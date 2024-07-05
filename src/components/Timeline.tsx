@@ -1,4 +1,3 @@
-import React from "react";
 import {
     Timeline,
     TimelineItem,
@@ -12,8 +11,8 @@ import { ComputerDesktopIcon, ClockIcon } from "@heroicons/react/24/solid";
 import useInView from "../components/useInView";
 
 export default function TimelineWithIcon() {
-    const [ref, isInView] = useInView({ threshold: 1 });
-    const [ref2, isInView2] = useInView({ threshold: 1 });
+    const [ref, isInView] = useInView({ threshold: 0.9 });
+    const [ref2, isInView2] = useInView({ threshold: 0.9 });
 
     return (
         <div className="sm:w-[32rem] w-7/8">
@@ -93,11 +92,13 @@ export default function TimelineWithIcon() {
                             color="gray"
                             className="font-normal text-gray-600 text-justify"
                         >
-                            The key to more success is to have a lot of pillows.
-                            Put it this way, it took me twenty five years to get
-                            these plants, twenty five years of blood sweat and
-                            tears, and I&apos;m never giving up, I&apos;m just
-                            getting started. I&apos;m up to something. Fan luv.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Duis tincidunt consequat elit, in lobortis
+                            orci facilisis ut. Cras aliquet ligula ac pharetra
+                            aliquam. Fusce vel ligula non nulla lacinia
+                            vestibulum. Proin vel ex vel risus accumsan euismod.
+                            Integer commodo lorem nec nisl feugiat, quis
+                            scelerisque tortor accumsan.
                         </Typography>
                     </TimelineBody>
                 </TimelineItem>

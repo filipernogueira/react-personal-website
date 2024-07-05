@@ -68,7 +68,7 @@ const Education = () => {
             <h1 className="text-3xl text-black mb-10">Education</h1>
 
             <div className="flex justify-center items-center flex-col sm:flex-row">
-                <div className="mb-10 sm:mr-20 mr-0 sm:w-96 w-full">
+                <div className="mb-10 sm:mr-20 sm:pb-40 mr-0 sm:w-96 w-full">
                     <StepperWithIcon
                         activeStep={activeStep}
                         setActiveStep={setActiveStep}
