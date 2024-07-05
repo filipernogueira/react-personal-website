@@ -25,14 +25,18 @@ export default function UniversityCard({
     url: string;
 }) {
     return (
-        <Card className="w-96 h-[34.6rem] overflow-hidden">
+        <Card className="sm:w-96 w-full sm:h-[34.6rem] h-[36.5rem] overflow-hidden">
             <CardHeader
                 floated={false}
                 shadow={false}
                 color="transparent"
                 className="m-0 rounded-none flex justify-center items-center"
             >
-                <img className="h-20 mt-8" src={logo} alt="University image" />
+                <img
+                    className="sm:h-20 h-16 sm:mt-8 mt-6"
+                    src={logo}
+                    alt="University image"
+                />
             </CardHeader>
             <CardBody>
                 <Typography variant="h4" color="blue-gray">
@@ -49,10 +53,14 @@ export default function UniversityCard({
                 </Typography>
             </CardBody>
             <CardFooter className="flex items-center justify-between mt-auto">
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                    <Button>Discover</Button>
-                </a>
-                <Typography className="font-normal">{duration}</Typography>
+                {url !== "" && (
+                    <a href={url} target="_blank" rel="noopener noreferrer">
+                        <Button>Discover</Button>
+                    </a>
+                )}
+                <Typography className="font-normal sm:text-base text-xs">
+                    {duration}
+                </Typography>
             </CardFooter>
         </Card>
     );

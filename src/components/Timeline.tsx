@@ -11,7 +11,7 @@ import { ComputerDesktopIcon, ClockIcon } from "@heroicons/react/24/solid";
 
 export default function TimelineWithIcon() {
     return (
-        <div className="w-[32rem]">
+        <div className="sm:w-[32rem] w-7/8">
             <Timeline>
                 <TimelineItem>
                     <TimelineConnector />

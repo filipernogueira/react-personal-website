@@ -63,11 +63,12 @@ const Education = () => {
     return (
         <div
             id="education"
-            className="w-full bg-gray-100 flex flex-col justify-start items-center p-10 rounded-2xl shadow-2xl"
+            className="w-full bg-gray-100 flex flex-col sm:justify-start justify-center items-center sm:p-10 p-8 rounded-2xl shadow-2xl"
         >
             <h1 className="text-3xl text-black mb-10">Education</h1>
-            <div className="flex justify-center items-center">
-                <div className="mb-10  mr-20 w-96">
+
+            <div className="flex justify-center items-center flex-col sm:flex-row">
+                <div className="mb-10 sm:mr-20 mr-0 sm:w-96 w-full">
                     <StepperWithIcon
                         activeStep={activeStep}
                         setActiveStep={setActiveStep}

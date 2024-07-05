@@ -5,13 +5,11 @@ const Home = () => {
     return (
         <div
             id="home"
-            className="w-full h-screen bg-gray-100 flex justify-center items-center my-10 rounded-2xl shadow-2xl"
+            className="w-full sm:h-screen bg-gray-100 flex sm:flex-row justify-center items-center my-10 sm:p-10 p-8 rounded-2xl shadow-2xl flex-col"
         >
-            <div className="flex flex-col mr-40 justify-center items-center">
-                <span className="text-5xl">Hello, I'm Filipe</span>
-                <span className="text-lg my-2">
-                    A creative Developer and Designer.
-                </span>
+            <div className="flex flex-col sm:mr-40 justify-center items-center sm:mb-0 mb-10">
+                <span className="sm:text-5xl text-4xl">Hello, I'm Filipe</span>
+                <span className="text-lg my-2">A Student and Developer.</span>
                 <a
                     href="https://www.linkedin.com/in/-filipe-nogueira/"
                     target="_blank"
@@ -23,7 +21,7 @@ const Home = () => {
                 </a>
             </div>
             <img
-                className="h-96 w-96 rounded-full object-cover object-center"
+                className="sm:w-1/4 w-1/2 rounded-full object-cover object-center"
                 src={profilePicture}
                 alt="nature image"
             />

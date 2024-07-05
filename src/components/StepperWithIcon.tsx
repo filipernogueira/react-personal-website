@@ -41,7 +41,7 @@ export default function StepperWithIcon({
                     <img src={questionMark} className="w-5 h-5" />
                 </Step>
             </Stepper>
-            <div className="mt-16 flex justify-between">
+            <div className="mt-8 flex justify-between">
                 <Button onClick={handlePrev} disabled={isFirstStep}>
                     Prev
                 </Button>
