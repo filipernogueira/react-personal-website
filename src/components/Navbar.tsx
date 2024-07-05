@@ -98,7 +98,7 @@ function NavList() {
 }
 
 export default function NavbarSimple() {
-    const [openNav, setOpenNav] = React.useState(false);
+    const [openNav, setOpenNav] = React.useState<boolean>(false);
 
     const handleWindowResize = () =>
         window.innerWidth >= 960 && setOpenNav(false);

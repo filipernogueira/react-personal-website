@@ -1,3 +1,4 @@
+import React from "react";
 import {
     Timeline,
     TimelineItem,
@@ -8,13 +9,23 @@ import {
     Typography,
 } from "@material-tailwind/react";
 import { ComputerDesktopIcon, ClockIcon } from "@heroicons/react/24/solid";
+import useInView from "../components/useInView";
 
 export default function TimelineWithIcon() {
+    const [ref, isInView] = useInView({ threshold: 1 });
+    const [ref2, isInView2] = useInView({ threshold: 1 });
+
     return (
         <div className="sm:w-[32rem] w-7/8">
             <Timeline>
-                <TimelineItem>
-                    <TimelineConnector />
+                <TimelineItem
+                    ref={ref}
+                    className={`transition-opacity duration-1000 ${
+                        isInView ? "opacity-100" : "opacity-0"
+                    }`}
+                >
+                    {isInView2 && <TimelineConnector />}{" "}
+                    {/* Conditionally render the connector */}
                     <TimelineHeader>
                         <TimelineIcon className="p-2">
                             <ComputerDesktopIcon className="h-4 w-4" />
@@ -50,7 +61,12 @@ export default function TimelineWithIcon() {
                         </Typography>
                     </TimelineBody>
                 </TimelineItem>
-                <TimelineItem>
+                <TimelineItem
+                    ref={ref2}
+                    className={`transition-opacity duration-1000 ${
+                        isInView2 ? "opacity-100" : "opacity-0"
+                    }`}
+                >
                     <TimelineHeader>
                         <TimelineIcon className="p-2">
                             <ClockIcon className="h-4 w-4" />
@@ -71,7 +87,7 @@ export default function TimelineWithIcon() {
                             color="blue-gray"
                             className="text-left mb-3"
                         >
-                            Starting in Set 2024
+                            Starting in Sep 2024
                         </Typography>
                         <Typography
                             color="gray"

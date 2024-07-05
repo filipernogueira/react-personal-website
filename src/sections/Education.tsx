@@ -12,7 +12,7 @@ const universities = [
         degreeType: "Bachelor's degree",
         degree: "Computer Science and Telecommunications Engineering",
         description:
-            "Final Project done with INESC-ID on a Anonimization Application to help Supreme Justice Court's workers.",
+            "Final Project done with INESC-ID on a Anonimization application to help Supreme Justice Court's workers.",
         duration: "2020 - 2024",
         url: "https://tecnico.ulisboa.pt/pt/",
     },

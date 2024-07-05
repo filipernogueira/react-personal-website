@@ -11,12 +11,12 @@ const Home = () => {
                 <span className="sm:text-5xl text-4xl">Hello, I'm Filipe</span>
                 <span className="text-lg my-2">A Student and Developer.</span>
                 <a
-                    href="https://www.linkedin.com/in/-filipe-nogueira/"
+                    href="https://drive.google.com/file/d/1pGR4YFF2zZHYWLu1mpNMHczHDjQkagSP/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     <Button className="rounded-full h-10 bg-blue-500 text-white">
-                        Check my Linkedin
+                        Check my CV
                     </Button>
                 </a>
             </div>

@@ -45,7 +45,11 @@ export default function StepperWithIcon({
                 <Button onClick={handlePrev} disabled={isFirstStep}>
                     Prev
                 </Button>
-                <Button onClick={handleNext} disabled={isLastStep}>
+                <Button
+                    onClick={handleNext}
+                    disabled={isLastStep}
+                    className={activeStep === 0 ? "animate-pulse" : ""}
+                >
                     Next
                 </Button>
             </div>
