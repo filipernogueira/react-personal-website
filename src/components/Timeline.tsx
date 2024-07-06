@@ -8,7 +8,7 @@ import {
     Typography,
 } from "@material-tailwind/react";
 import { ComputerDesktopIcon, ClockIcon } from "@heroicons/react/24/solid";
-import useInView from "../components/useInView";
+import useInView from "../hooks/useInView";
 import { experiences } from "../information";
 
 export default function TimelineWithIcon() {

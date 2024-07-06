@@ -12,6 +12,7 @@ function App() {
             <Contact />
             <Footer />
             {/* TODO:
+          - Contact email
           - Huawei e certificados,
           - Dark mode
           - fonts
