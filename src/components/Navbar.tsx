@@ -22,6 +22,7 @@ import {
     IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { firstName, lastName } from "../information";
 
 const handleSmoothScroll = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -121,7 +122,7 @@ export default function NavbarSimple() {
                     className="mr-4 cursor-pointer py-1.5"
                     onClick={handleSmoothScroll}
                 >
-                    Filipe Nogueira
+                    {firstName} {lastName}
                 </Typography>
                 <div className="hidden lg:block">
                     <NavList />

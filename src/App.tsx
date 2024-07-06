@@ -14,6 +14,8 @@ function App() {
             {/* TODO:
           - Huawei e certificados,
           - Dark mode
+          - fonts
+          - source code link
           */}
         </div>
     );

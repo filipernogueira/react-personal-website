@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { Stepper, Step, Button } from "@material-tailwind/react";
-import PT from "../assets/flags/PT.png";
-import FR from "../assets/flags/FR.png";
-import CN from "../assets/flags/CN.png";
-import questionMark from "../assets/flags/questionMark.png";
 
 export default function StepperWithIcon({
     activeStep,
     setActiveStep,
+    universities, //TODO type
 }: {
     activeStep: number;
     setActiveStep: React.Dispatch<React.SetStateAction<number>>;
@@ -25,21 +22,15 @@ export default function StepperWithIcon({
                 isLastStep={(value) => setIsLastStep(value)}
                 isFirstStep={(value) => setIsFirstStep(value)}
             >
-                <Step className="bg-gray-400" onClick={() => setActiveStep(0)}>
-                    <img src={PT} className="w-5 h-5" />
-                </Step>
-                <Step className="bg-gray-400" onClick={() => setActiveStep(0)}>
-                    <img src={FR} className="w-5 h-5" />
-                </Step>
-                <Step className="bg-gray-400" onClick={() => setActiveStep(1)}>
-                    <img src={CN} className="w-5 h-5" />
-                </Step>
-                <Step className="bg-gray-400" onClick={() => setActiveStep(2)}>
-                    <img src={PT} className="w-5 h-5" />
-                </Step>
-                <Step className="bg-gray-400" onClick={() => setActiveStep(2)}>
-                    <img src={questionMark} className="w-5 h-5" />
-                </Step>
+                {universities.map((uni, idx) => (
+                    <Step
+                        key={idx}
+                        className="bg-gray-400"
+                        onClick={() => setActiveStep(idx)}
+                    >
+                        <img src={uni.countryFlag} className="w-5 h-5" />
+                    </Step>
+                ))}
             </Stepper>
             <div className="mt-8 flex justify-between">
                 <Button onClick={handlePrev} disabled={isFirstStep}>
