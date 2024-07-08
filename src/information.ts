@@ -6,6 +6,7 @@ import questionMark from "./assets/flags/questionMark.png";
 import PT from "./assets/flags/PT.png";
 import FR from "./assets/flags/FR.png";
 import CN from "./assets/flags/CN.png";
+import { University, Experience } from "./types";
 
 // Informations to be used in the Navbar and Home section
 export const firstName: string = "Filipe";
@@ -16,7 +17,7 @@ export const smallDescription: string = "A Student and Developer."; // A small d
 export const profileImage: string = profilePicture;
 
 // Information to be used in the Education section
-export const universities = [
+export const universities: University[] = [
     {
         logo: IST,
         name: "Instituto Superior Técnico",
@@ -74,7 +75,7 @@ export const universities = [
 ];
 
 // Information to be used in the Education section
-export const experiences = [
+export const experiences: Experience[] = [
     {
         role: "Web Dev Team Lead",
         company: "Twinkle",

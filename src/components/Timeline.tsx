@@ -11,6 +11,13 @@ import { ComputerDesktopIcon, ClockIcon } from "@heroicons/react/24/solid";
 import useInView from "../hooks/useInView";
 import { experiences } from "../information";
 
+interface Experience {
+    role: string;
+    company: string;
+    duration: string;
+    description: string;
+}
+
 export default function TimelineWithIcon() {
     const refs = experiences.map(() => useInView({ threshold: 0.9 }));
     const icons = [
@@ -21,7 +28,7 @@ export default function TimelineWithIcon() {
     return (
         <div className="sm:w-[32rem] w-7/8">
             <Timeline>
-                {experiences.map((experience, index) => {
+                {experiences.map((experience: Experience, index: number) => {
                     const [ref, isInView] = refs[index];
                     const isNextInView =
                         index < refs.length - 1 && refs[index + 1][1];

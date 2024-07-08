@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Stepper, Step, Button } from "@material-tailwind/react";
+import { University } from "../types";
 
 export default function StepperWithIcon({
     activeStep,
     setActiveStep,
-    universities, //TODO type
+    universities,
 }: {
     activeStep: number;
     setActiveStep: React.Dispatch<React.SetStateAction<number>>;
+    universities: University[];
 }) {
     const [isLastStep, setIsLastStep] = useState<boolean>(false);
     const [isFirstStep, setIsFirstStep] = useState<boolean>(false);
@@ -22,7 +24,7 @@ export default function StepperWithIcon({
                 isLastStep={(value) => setIsLastStep(value)}
                 isFirstStep={(value) => setIsFirstStep(value)}
             >
-                {universities.map((uni, idx) => (
+                {universities.map((uni: University, idx: number) => (
                     <Step
                         key={idx}
                         className="bg-gray-400"

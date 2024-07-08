@@ -12,10 +12,9 @@ function App() {
             <Contact />
             <Footer />
             {/* TODO:
-          - Contact email
+          - fonts
           - Huawei e certificados,
           - Dark mode
-          - fonts
           - source code link
           */}
         </div>

@@ -1,6 +1,7 @@
+import React from "react";
 import { Timeline } from "../components";
 
-const Experience = () => {
+const Experience: React.FC = () => {
     return (
         <div
             id="experience"

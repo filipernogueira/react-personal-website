@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
 import emailjs from "emailjs-com";
 
