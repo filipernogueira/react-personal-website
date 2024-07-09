@@ -19,7 +19,7 @@ function App() {
             <Footer darkMode={isDarkModeOn} />
             <div
                 className={`w-12 h-12 ${
-                    isDarkModeOn ? "bg-gray-100" : "bg-black"
+                    isDarkModeOn ? "bg-gray-300" : "bg-gray-800"
                 } fixed right-14 bottom-6 rounded-full sm:flex justify-center items-center hidden cursor-pointer shadow-lg`}
                 onClick={() => setIsDarkModeOn((prev) => !prev)}
             >
@@ -56,10 +56,6 @@ function App() {
                     </svg>
                 )}
             </div>
-            {/* TODO:
-          - Huawei e certificados,
-          - source code link
-          */}
         </div>
     );
 }

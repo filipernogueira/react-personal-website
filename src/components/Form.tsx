@@ -27,16 +27,30 @@ export default function SimpleRegistrationForm({
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID).then(
-            (response) => {
-                console.log("SUCCESS!", response.status, response.text);
-                alert("Message sent successfully!");
-            },
-            (err) => {
-                console.log("FAILED...", err);
-                alert("Failed to send message. Please try again later.");
-            }
-        );
+        if (
+            formData.name !== "" &&
+            formData.email !== "" &&
+            formData.message !== "" &&
+            validateEmail(formData.email)
+        ) {
+            emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID).then(
+                (response) => {
+                    console.log("SUCCESS!", response.status, response.text);
+                    alert("Message sent successfully!");
+                },
+                (err) => {
+                    console.log("FAILED...", err);
+                    alert("Failed to send message. Please try again later.");
+                }
+            );
+        } else {
+            alert("Fill all information.");
+        }
+    };
+
+    const validateEmail = (email: string): boolean => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
     };
 
     return (
