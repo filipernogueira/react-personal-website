@@ -244,6 +244,7 @@ declare module "@material-tailwind/react" {
         className?: string;
         isLastStep?: (value: boolean) => void; // Add isLastStep
         isFirstStep?: (value: boolean) => void; // Add isFirstStep
+        activeLineClassName?: string;
     }
 
     export const Stepper: React.FC<StepperProps>;
@@ -256,6 +257,8 @@ declare module "@material-tailwind/react" {
         children?: React.ReactNode;
         className?: string;
         onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+        activeClassName?: string;
+        completedClassName?: string;
     }
 
     export const Step: React.FC<StepProps>;

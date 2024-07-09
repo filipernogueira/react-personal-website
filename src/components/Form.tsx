@@ -2,7 +2,11 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
 import emailjs from "emailjs-com";
 
-export default function SimpleRegistrationForm() {
+export default function SimpleRegistrationForm({
+    darkMode,
+}: {
+    darkMode: boolean;
+}) {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -41,7 +45,10 @@ export default function SimpleRegistrationForm() {
             color="transparent"
             shadow={false}
         >
-            <Typography color="gray" className="font-normal">
+            <Typography
+                color="gray"
+                className={`font-normal ${darkMode ? "text-white" : ""}`}
+            >
                 Feel free to contact me to collaborate, or just to chat!
             </Typography>
             <form
@@ -52,14 +59,16 @@ export default function SimpleRegistrationForm() {
                     <Typography
                         variant="h6"
                         color="blue-gray"
-                        className="-mb-3"
+                        className={`-mb-3 ${darkMode ? "text-gray-100" : ""}`}
                     >
                         Name
                     </Typography>
                     <Input
                         size="lg"
                         placeholder="Your name"
-                        className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+                        className={`!border-t-blue-gray-200 focus:!border-t-gray-900 ${
+                            darkMode ? "text-gray-100" : ""
+                        }`}
                         labelProps={{
                             className: "before:content-none after:content-none",
                         }}
@@ -69,14 +78,16 @@ export default function SimpleRegistrationForm() {
                     <Typography
                         variant="h6"
                         color="blue-gray"
-                        className="-mb-3"
+                        className={`-mb-3 ${darkMode ? "text-gray-100" : ""}`}
                     >
                         Email
                     </Typography>
                     <Input
                         size="lg"
                         placeholder="name@mail.com"
-                        className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+                        className={`!border-t-blue-gray-200 focus:!border-t-gray-900 ${
+                            darkMode ? "text-gray-100" : ""
+                        }`}
                         labelProps={{
                             className: "before:content-none after:content-none",
                         }}
@@ -86,14 +97,16 @@ export default function SimpleRegistrationForm() {
                     <Typography
                         variant="h6"
                         color="blue-gray"
-                        className="-mb-3"
+                        className={`-mb-3 ${darkMode ? "text-gray-100" : ""}`}
                     >
                         Message
                     </Typography>
                     <Input
                         size="lg"
                         placeholder="Your message"
-                        className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+                        className={`!border-t-blue-gray-200 focus:!border-t-gray-900 ${
+                            darkMode ? "text-gray-100" : ""
+                        }`}
                         labelProps={{
                             className: "before:content-none after:content-none",
                         }}
@@ -101,7 +114,13 @@ export default function SimpleRegistrationForm() {
                         onChange={handleChange}
                     />
                 </div>
-                <Button className="mt-6" fullWidth type="submit">
+                <Button
+                    className={`mt-6 ${
+                        darkMode ? "bg-gray-100 text-black" : ""
+                    }`}
+                    fullWidth
+                    type="submit"
+                >
                     Send
                 </Button>
             </form>

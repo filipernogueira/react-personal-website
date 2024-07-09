@@ -1,14 +1,15 @@
-import React from "react";
-import { Timeline } from "../components";
+import { Timeline, SectionTitle } from "../components";
 
-const Experience: React.FC = () => {
+const Experience = ({ darkMode }: { darkMode: boolean }) => {
     return (
         <div
             id="experience"
-            className="w-full bg-gray-100 flex flex-col justify-start items-center my-10 sm:p-10 p-8 rounded-2xl shadow-2xl"
+            className={`w-full bg-gray-100 flex flex-col justify-start items-center my-10 sm:p-10 p-8 rounded-2xl shadow-2xl ${
+                darkMode ? "bg-gray-900" : "bg-gray-100"
+            }`}
         >
-            <h1 className="text-3xl mb-10">Experience</h1>
-            <Timeline />
+            <SectionTitle title="Experience" darkMode={darkMode} />
+            <Timeline darkMode={darkMode} />
         </div>
     );
 };

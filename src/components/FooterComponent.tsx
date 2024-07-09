@@ -10,14 +10,20 @@ import {
 
 const currentYear = new Date().getFullYear();
 
-export default function FooterWithSocialLinks() {
+export default function FooterWithSocialLinks({
+    darkMode,
+}: {
+    darkMode: boolean;
+}) {
     return (
         <footer className="relative w-full">
             <div className="mx-auto w-full max-w-7xl px-8">
                 <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
                     <Typography
                         variant="small"
-                        className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
+                        className={`mb-4 text-center font-normal ${
+                            darkMode ? "text-blue-gray-100" : ""
+                        } md:mb-0`}
                     >
                         &copy; {currentYear} {firstName} {lastName} . All Rights
                         Reserved.{" "}
@@ -35,7 +41,7 @@ export default function FooterWithSocialLinks() {
                         >
                             <svg
                                 className="h-5 w-5"
-                                fill="currentColor"
+                                fill={darkMode ? "white" : "currentColor"}
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
                             >
@@ -51,7 +57,7 @@ export default function FooterWithSocialLinks() {
                         >
                             <svg
                                 className="h-5 w-5"
-                                fill="currentColor"
+                                fill={darkMode ? "white" : "currentColor"}
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
                             >
@@ -71,7 +77,7 @@ export default function FooterWithSocialLinks() {
                         >
                             <svg
                                 className="h-5 w-5"
-                                fill="currentColor"
+                                fill={darkMode ? "white" : "currentColor"}
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
                             >
@@ -89,7 +95,7 @@ export default function FooterWithSocialLinks() {
                         >
                             <svg
                                 className="h-5 w-5"
-                                fill="currentColor"
+                                fill={darkMode ? "white":"currentColor"}
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
                             >
@@ -105,7 +111,7 @@ export default function FooterWithSocialLinks() {
                         >
                             <svg
                                 className="h-5 w-5"
-                                fill="currentColor"
+                                fill={darkMode ? "white":"currentColor"}
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
                             >

@@ -6,19 +6,37 @@ import {
     profileImage,
 } from "../information";
 
-const Home = () => {
+const Home = ({ darkMode }: { darkMode: boolean }) => {
     return (
         <div
             id="home"
-            className="w-full sm:h-screen bg-gray-100 flex sm:flex-row justify-center items-center my-10 sm:p-10 p-8 rounded-2xl shadow-2xl flex-col"
+            className={`w-full sm:h-screen ${
+                darkMode ? "bg-gray-900" : "bg-gray-100"
+            } flex sm:flex-row justify-center items-center my-10 sm:p-10 p-8 rounded-2xl shadow-2xl flex-col`}
         >
             <div className="flex flex-col sm:mr-40 justify-center items-center sm:mb-0 mb-10">
-                <span className="sm:text-5xl text-4xl">
+                <span
+                    className={`sm:text-5xl text-4xl ${
+                        darkMode ? "text-white" : "text-black"
+                    }`}
+                >
                     Hello, I'm {firstName}!
                 </span>
-                <span className="text-lg my-2">{smallDescription}</span>
+                <span
+                    className={`text-lg my-2 ${
+                        darkMode ? "text-white" : "text-black"
+                    }`}
+                >
+                    {smallDescription}
+                </span>
                 <a href={cvLink} target="_blank" rel="noopener noreferrer">
-                    <Button className="rounded-full h-10 bg-blue-500 text-white">
+                    <Button
+                        className={`rounded-full h-10 ${
+                            darkMode
+                                ? "bg-blue-600 text-black"
+                                : "bg-blue-500 text-white"
+                        }`}
+                    >
                         Check my CV
                     </Button>
                 </a>

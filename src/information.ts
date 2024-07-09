@@ -2,10 +2,10 @@ import profilePicture from "./assets/profilePicture.jpg";
 import IST from "./assets/universities/IST.png";
 import THU from "./assets/universities/THU.png";
 import Telecom from "./assets/universities/Telecom.png";
-import questionMark from "./assets/flags/questionMark.png";
-import PT from "./assets/flags/PT.png";
-import FR from "./assets/flags/FR.png";
-import CN from "./assets/flags/CN.png";
+import questionMark from "./assets/emojis/questionMark.png";
+import PT from "./assets/emojis/PT.png";
+import FR from "./assets/emojis/FR.png";
+import CN from "./assets/emojis/CN.png";
 import { University, Experience } from "./types";
 
 // Informations to be used in the Navbar and Home section
@@ -82,14 +82,14 @@ export const experiences: Experience[] = [
         duration: "Jun 2022 - Present",
         description:
             "Twinkle is a startup aimed at enhancing the restaurant experience through innovative on-premise ordering, payment, and reservation solutions. We've developed three main products, all connected through a unified API. I lead the development of the startup's websites, and connecting it to a backend.",
-    },
+    } /*
     {
         role: "Web Developer",
         company: "Student Hub",
         duration: "Starting in Sep 2024",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt consequat elit, in lobortis orci facilisis ut. Cras aliquet ligula ac pharetra aliquam. Fusce vel ligula non nulla lacinia vestibulum. Proin vel ex vel risus accumsan euismod. Integer commodo lorem nec nisl feugiat, quis scelerisque tortor accumsan.",
-    },
+    },*/,
 ];
 
 // Information to be used in the footer

@@ -4,3 +4,4 @@ export { default as UniversityCard } from "./UniversityCard";
 export { default as Timeline } from "./Timeline";
 export { default as Form } from "./Form";
 export { default as FooterComponent } from "./FooterComponent";
+export { default as SectionTitle } from "./SectionTitle";

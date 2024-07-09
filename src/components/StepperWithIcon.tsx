@@ -6,10 +6,12 @@ export default function StepperWithIcon({
     activeStep,
     setActiveStep,
     universities,
+    darkMode,
 }: {
     activeStep: number;
     setActiveStep: React.Dispatch<React.SetStateAction<number>>;
     universities: University[];
+    darkMode: boolean;
 }) {
     const [isLastStep, setIsLastStep] = useState<boolean>(false);
     const [isFirstStep, setIsFirstStep] = useState<boolean>(false);
@@ -23,11 +25,14 @@ export default function StepperWithIcon({
                 activeStep={activeStep}
                 isLastStep={(value) => setIsLastStep(value)}
                 isFirstStep={(value) => setIsFirstStep(value)}
+                activeLineClassName={darkMode ? "bg-gray-700" : ""}
             >
                 {universities.map((uni: University, idx: number) => (
                     <Step
                         key={idx}
-                        className="bg-gray-400"
+                        className={darkMode ? "bg-gray-300" : ""}
+                        activeClassName={darkMode ? "bg-gray-700" : ""}
+                        completedClassName={darkMode ? "bg-gray-700" : ""}
                         onClick={() => setActiveStep(idx)}
                     >
                         <img src={uni.countryFlag} className="w-5 h-5" />
@@ -35,13 +40,19 @@ export default function StepperWithIcon({
                 ))}
             </Stepper>
             <div className="mt-8 flex justify-between">
-                <Button onClick={handlePrev} disabled={isFirstStep}>
+                <Button
+                    onClick={handlePrev}
+                    disabled={isFirstStep}
+                    className={`${darkMode ? "bg-gray-300 text-black" : ""}`}
+                >
                     Prev
                 </Button>
                 <Button
                     onClick={handleNext}
                     disabled={isLastStep}
-                    className={activeStep === 0 ? "animate-pulse" : ""}
+                    className={`${darkMode ? "bg-gray-300 text-black" : ""} ${
+                        activeStep === 0 ? "animate-pulse" : ""
+                    }`}
                 >
                     Next
                 </Button>

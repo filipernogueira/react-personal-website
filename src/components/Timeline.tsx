@@ -18,11 +18,11 @@ interface Experience {
     description: string;
 }
 
-export default function TimelineWithIcon() {
+export default function TimelineWithIcon({ darkMode }: { darkMode: boolean }) {
     const refs = experiences.map(() => useInView({ threshold: 0.9 }));
     const icons = [
-        <ComputerDesktopIcon className="h-4 w-4" />,
-        <ClockIcon className="h-4 w-4" />,
+        <ComputerDesktopIcon className={`h-4 w-4 ${darkMode ? "" : ""}`} />,
+        <ClockIcon className={`h-4 w-4 ${darkMode ? "" : ""}`} />,
     ];
 
     return (
@@ -44,10 +44,18 @@ export default function TimelineWithIcon() {
                                 <TimelineConnector />
                             )}
                             <TimelineHeader>
-                                <TimelineIcon className="p-2">
+                                <TimelineIcon
+                                    className={`p-2 ${
+                                        darkMode ? "bg-gray-700" : ""
+                                    }`}
+                                >
                                     {icons[index]}
                                 </TimelineIcon>
-                                <Typography variant="h5" color="blue-gray">
+                                <Typography
+                                    variant="h5"
+                                    color="blue-gray"
+                                    className={darkMode ? "text-gray-100" : ""}
+                                >
                                     {experience.role}
                                 </Typography>
                             </TimelineHeader>
@@ -55,19 +63,25 @@ export default function TimelineWithIcon() {
                                 <Typography
                                     variant="h6"
                                     color="blue-gray"
-                                    className="text-left"
+                                    className={`text-left ${
+                                        darkMode ? "text-gray-100" : ""
+                                    }`}
                                 >
                                     {experience.company}
                                 </Typography>
                                 <Typography
                                     color="blue-gray"
-                                    className="text-left mb-3"
+                                    className={`text-left mb-3 ${
+                                        darkMode ? "text-gray-100" : ""
+                                    }`}
                                 >
                                     {experience.duration}
                                 </Typography>
                                 <Typography
                                     color="gray"
-                                    className="font-normal text-gray-600 text-justify"
+                                    className={`font-normal text-gray-600 text-justify ${
+                                        darkMode ? "text-white" : ""
+                                    }`}
                                 >
                                     {experience.description}
                                 </Typography>
