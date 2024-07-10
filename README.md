@@ -1,6 +1,8 @@
-# Portfolio (FALTA FOTO DE PERFIL)
+# Portfolio
 
 This repo contains my personal website, built using React with TypeScript and Vite. You can use it as a template for your own portfolio website. Follow the setup steps below to customize it with your information.
+
+You can check my website here: "enter link"
 
 ## Setup
 
