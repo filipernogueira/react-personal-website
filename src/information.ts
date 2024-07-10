@@ -82,18 +82,19 @@ export const experiences: Experience[] = [
         duration: "Jun 2022 - Present",
         description:
             "Twinkle is a startup aimed at enhancing the restaurant experience through innovative on-premise ordering, payment, and reservation solutions. We've developed three main products, all connected through a unified API. I lead the development of the startup's websites, and connecting it to a backend.",
-    } /*
+    },
     {
         role: "Web Developer",
         company: "Student Hub",
         duration: "Starting in Sep 2024",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt consequat elit, in lobortis orci facilisis ut. Cras aliquet ligula ac pharetra aliquam. Fusce vel ligula non nulla lacinia vestibulum. Proin vel ex vel risus accumsan euismod. Integer commodo lorem nec nisl feugiat, quis scelerisque tortor accumsan.",
-    },*/,
+    },
 ];
 
 // Information to be used in the footer
-export const sourceCodeLink: string = "";
+export const sourceCodeLink: string =
+    "https://github.com/filipernogueira/react-personal-website";
 export const linkedinLink: string =
     "https://www.linkedin.com/in/-filipe-nogueira/";
 export const githubLink: string = "https://github.com/filipernogueira";
