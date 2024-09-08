@@ -27,7 +27,11 @@ export default function FooterWithSocialLinks({
                     >
                         &copy; {currentYear} {firstName} {lastName} . All Rights
                         Reserved.{" "}
-                        <a href={sourceCodeLink}>
+                        <a
+                            href={sourceCodeLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <span className="cursor-pointer">Source code.</span>
                         </a>
                     </Typography>
